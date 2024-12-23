@@ -13,9 +13,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lae.clueless"
     },
     "android": {
+      "package": "com.lae.clueless",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -32,6 +34,14 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "googleClientId": {
+        "iosClientId": "143160608214-7uhbkqsttmehorls1estej6fcj1q90sa.apps.googleusercontent.com",
+        "androidClientId": "YOUR_ANDROID_CLIENT_ID",
+        "expoClientId": "YOUR_WEB_CLIENT_ID",
+        "webClientId": "YOUR_WEB_CLIENT_ID"
+      }
+    }  
   }
 }
