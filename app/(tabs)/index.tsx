@@ -1,11 +1,13 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import React from 'react';
+import { Image, StyleSheet, Platform, View, Button } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) { // Accept navigation prop
+  console.log('Navigation Object:', navigation); // Debug navigation object
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -45,6 +47,13 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
+      </ThemedView>
+      {/* Button to Navigate to Login */}
+      <ThemedView style={styles.stepContainer}>
+        <Button
+          title="Go to Login"
+          onPress={() => navigation.navigate('Login')} // Navigate to LoginScreen
+        />
       </ThemedView>
     </ParallaxScrollView>
   );
